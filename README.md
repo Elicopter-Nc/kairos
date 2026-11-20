@@ -1,5 +1,7 @@
 <div align="center">
 
+**Français** · [English](README.en.md)
+
 <img src="docs/hero.gif" width="720" alt="Kairos : ombres de feuillage animées qui ondulent sur le papier vert pâle, pétales qui tombent" />
 
 # Kairos
@@ -37,6 +39,20 @@ Pas de compte, pas de pub, pas de traqueur. **Tout reste sur ton téléphone.**
 🗾 **Les 72 micro-saisons japonaises.** Chaque jour, le nom poétique de la saison du moment (« les pousses de bambou sortent »), hémisphère nord ou sud.
 
 🖌️ **Des petits gestes soignés.** Cocher une tâche trace un coup de pinceau et fait tomber une feuille. Glisse à droite pour finir, à gauche pour reporter à demain.
+
+📖 **Un journal qui est un vrai livre.** Une page par jour, que tu tournes du doigt : le papier se courbe et révèle la page suivante. Chaque page porte la date en kanji, le cachet de ton humeur (晴 曇 雨), tes lignes, une fleur séchée de la saison et le bilan du jour.
+
+🌳 **Ton année en bonsaï.** Chaque jour actif fait pousser un rameau, les belles journées fleurissent, le feuillage suit la saison. Il est posé sur une table basse, devant des montagnes au lavis d'encre. Touche un feuillage pour revoir sa journée.
+
+<div align="center">
+
+<img src="docs/journal-bonsai.png" width="720" alt="Le journal en livre, page du 20 novembre avec le cachet 晴, et le bonsaï de l'année sur sa table basse" />
+
+<sub>Le journal · Le bonsaï de l'année</sub>
+
+</div>
+
+🌐 **En français ou en anglais.** L'app suit la langue du téléphone, ou celle que tu choisis dans Plus.
 
 📱 **Des widgets qui s'adaptent.** Tâches (cochables depuis l'écran d'accueil), Agenda, Météo et Notes, de la petite bande 2×1 au grand 4×4. **Trois styles au choix** dans Plus → Widget, en mode Jour comme en mode Nuit. Le widget Notes peut afficher **la note de ton choix** (appui long sur le widget → Configurer).
 
@@ -134,14 +150,25 @@ src/app/                  écrans (Expo Router)
   task/[id].tsx           éditeur de tâche
   note/[id].tsx           éditeur de note
   focus.tsx  habits.tsx   Focus, Rituels
+  journal.tsx jardin.tsx  Journal (livre), Bonsaï
 src/components/           UI Matcha (Card, Btn, Chip, Enso…), éléments de liste, éditeurs
 src/data/                 types, stockage, store React, récurrences
 src/lib/                  dates, notifications, sélecteurs natifs, sauvegarde, stats
+src/i18n/                 traductions (le texte français sert de clé, dictionnaires anglais dans en/)
 src/widget/               widget Android (rendu + gestion des clics)
 src/theme.tsx             palettes Jour / Nuit, nuancier, kanji
 src/components/Komorebi.tsx  shader de lumière (Skia + Reanimated)
 scripts/subset-fonts.sh   régénère les polices allégées (si tu ajoutes un kanji)
 ```
+
+## Contribuer
+
+Les contributions sont les bienvenues ! Tu peux :
+
+- **signaler un bug ou proposer une idée** en ouvrant une [issue](https://github.com/Elicopter-Nc/kairos/issues) (une capture d'écran aide beaucoup) ;
+- **proposer une modification** avec une pull request : correction, nouvelle fonctionnalité, amélioration d'une traduction (`src/i18n/en/`)…
+
+Pour une grosse fonctionnalité, ouvre d'abord une issue pour en parler, ça évite de travailler pour rien. Avant d'envoyer une PR, vérifie que `npx tsc --noEmit` et `npx expo lint` passent, et garde l'esprit de l'app : calme, léger, sans compte ni traqueur.
 
 ## Crédits
 
