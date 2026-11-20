@@ -1,0 +1,163 @@
+{
+  "expo": {
+    "name": "Kairos",
+    "slug": "kairos",
+    "scheme": "kairos",
+    "version": "1.8.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.kairos.carnet",
+      "adaptiveIcon": {
+        "backgroundColor": "#EEF0E5",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR"
+      ],
+      "predictiveBackGestureEnabled": false,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "Kairos affiche les événements de tes calendriers. Rien ne quitte le téléphone."
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      "expo-font",
+      "expo-sharing",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#EEF0E5",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "dark": {
+            "backgroundColor": "#181C16"
+          }
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#6F8A63"
+        }
+      ],
+      [
+        "react-native-android-widget",
+        {
+          "fonts": [
+            "./assets/fonts/Mincho-Medium.ttf",
+            "./assets/fonts/Gothic-Regular.ttf",
+            "./assets/fonts/Gothic-Medium.ttf"
+          ],
+          "widgets": [
+            {
+              "name": "KairosTasks",
+              "label": "Kairos · Tâches",
+              "description": "Tes tâches, cochables depuis l'écran d'accueil. Redimensionnable de 2×1 à 4×4.",
+              "minWidth": "110dp",
+              "minHeight": "50dp",
+              "targetCellWidth": 4,
+              "targetCellHeight": 3,
+              "maxResizeWidth": "520dp",
+              "maxResizeHeight": "600dp",
+              "resizeMode": "horizontal|vertical",
+              "updatePeriodMillis": 1800000,
+              "previewImage": "./assets/widget-preview.png"
+            },
+            {
+              "name": "KairosAgenda",
+              "label": "Kairos · Agenda",
+              "description": "Le programme du jour, ou de la semaine si la journée est libre.",
+              "minWidth": "110dp",
+              "minHeight": "50dp",
+              "targetCellWidth": 4,
+              "targetCellHeight": 2,
+              "maxResizeWidth": "520dp",
+              "maxResizeHeight": "500dp",
+              "resizeMode": "horizontal|vertical",
+              "updatePeriodMillis": 1800000,
+              "previewImage": "./assets/widget-agenda-preview.png"
+            },
+            {
+              "name": "KairosMeteo",
+              "label": "Kairos · Météo",
+              "description": "Le temps qu'il fait et les prochaines heures, dans le style Kairos.",
+              "minWidth": "110dp",
+              "minHeight": "50dp",
+              "targetCellWidth": 2,
+              "targetCellHeight": 2,
+              "maxResizeWidth": "520dp",
+              "maxResizeHeight": "300dp",
+              "resizeMode": "horizontal|vertical",
+              "updatePeriodMillis": 1800000,
+              "previewImage": "./assets/widget-meteo-preview.png"
+            },
+            {
+              "name": "KairosNotes",
+              "label": "Kairos · Notes",
+              "description": "Une note au choix (appui long → Configurer), ou tes notes épinglées et récentes.",
+              "minWidth": "110dp",
+              "minHeight": "50dp",
+              "targetCellWidth": 2,
+              "targetCellHeight": 2,
+              "maxResizeWidth": "520dp",
+              "maxResizeHeight": "600dp",
+              "resizeMode": "horizontal|vertical",
+              "updatePeriodMillis": 1800000,
+              "previewImage": "./assets/widget-notes-preview.png",
+              "widgetFeatures": "reconfigurable|configuration_optional"
+            }
+          ]
+        }
+      ],
+      "expo-image",
+      "expo-background-task",
+      "expo-audio",
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "83b4e276-05bd-4828-b0e5-8899293e205b"
+      }
+    },
+    "owner": "eli_nc",
+    "updates": {
+      "url": "https://u.expo.dev/83b4e276-05bd-4828-b0e5-8899293e205b"
+    }
+  }
+}
