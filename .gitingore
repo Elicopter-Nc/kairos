@@ -1,0 +1,56 @@
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# generated native folders
+/ios
+/android
+
+# APK / AAB : à publier dans les GitHub Releases, pas dans le code
+*.apk
+*.aab
+
+# Natif généré par prebuild (EAS le régénère)
+/android
+/ios
+
+# Environnement local
+.env*.local
+.claude/settings.local.json
+
+# Outils d'assistant de code (restent en local, pas utiles à l'app)
+AGENTS.md
+CLAUDE.md
+.claude/
